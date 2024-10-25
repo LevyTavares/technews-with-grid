@@ -1,0 +1,181 @@
+:root{
+    --amarelo: #BFF009;
+    --cinza: #868585;
+    --preto: #1e1e1e;
+    --branco: #ffffff;
+    --cinzaClaro: #F2F2F2;
+    --verdeLimao: #0dff00;
+    --blue: #011ce3;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+    gap: 32px;
+}
+
+.space-between{
+    justify-items: center;
+}
+
+header{
+    padding: 19px 0px;
+}
+
+header section, main section {
+    width: 1312px; /* Define a mesma largura para o header e o main */
+    margin: 0 auto; /* Centraliza ambos na página */
+}
+
+header section {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Logo, menu e botão */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 16px;
+    padding: 0 20px; /* Ajuste de padding para alinhamento */
+}
+
+header section > img {
+    justify-self: start;
+}
+
+header section nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto); /* 5 links no menu */
+    justify-content: center; /* Centraliza o menu */
+    gap: 32px;
+    background-color: var(--cinzaClaro);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+header section nav a{
+    text-decoration: none;
+    color: var(--preto);
+    display: grid;
+    grid-template-columns: 60px 60px;
+    grid-gap: 8px 8px;
+}
+
+header section nav a#ux{
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr);
+}
+
+header section nav a#bd{
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr);
+}
+
+header section nav a:hover{
+    color: var(--blue);
+    transition: color 0.2s ease;
+    transition: padding 0.2s ease;
+}
+
+
+header section > a {
+    justify-self: end; /* Alinha o botão à direita */
+    color: var(--preto);
+    background-color: var(--amarelo);
+    border-radius: 8px;
+    padding: 16px;
+    text-decoration: none;
+}
+
+header section > a:hover{
+    background-color: var(--verdeLimao);
+    color: var(--branco);
+    transition: background-color 0.2s ease;
+    transition: color 0.2s ease;
+    transition: padding 0.2s ease;
+    transition: border 0.2s ease;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+}
+
+main section{
+    width: 1312px;
+    margin: 64px auto;
+}
+
+main header{
+    padding: 0px;
+    text-align: center;
+}
+
+main header small{
+    padding: 8px;
+    background-color: var(--amarelo);
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--preto);
+}
+
+main header h1{
+    font-size: 48px;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+main header p{
+    font-size: 14px;
+    color: var(--preto);
+    max-width: 354px;
+    margin: 0px auto;
+}
+
+main section > section{
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+}
+main section .card{
+    width: 368px;
+    padding: 24px;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 16px;
+    background-color: var(--cinzaClaro);
+    border-radius: 8px;
+}
+
+main section .card:hover{
+    background-color: var(--preto);
+    color: var(--branco);
+    transition: background-color 0.2s ease;
+}
+
+main section .card:hover a{
+    color: var(--branco);
+}
+
+main section .card a{
+    color: var(--preto);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main section .card p{
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--preto);
+    color: var(--cinza);
+    padding: 46px 0px;
+}
